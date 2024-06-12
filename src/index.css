@@ -12,3 +12,23 @@
   
 @tailwind components;
 @tailwind utilities;
+
+sup {
+  font-size: 2rem;
+  vertical-align: super;
+}
+
+.rowcard {
+  display: flex;
+  height: 50vh;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 1064px) {
+  .rowcard {
+    flex-direction: column;
+  }
+}

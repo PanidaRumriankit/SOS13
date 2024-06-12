@@ -4,23 +4,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-function menuCard() {
+function MenuCard(props) {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ width: 250 }}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
-              alt="green iguana"
+              image={ props.icon }
+              alt={ props.name }
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Lizard
+                { props.name }
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica
+                { props.description }
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -28,33 +27,32 @@ function menuCard() {
       );
 }
 
-function problemCard() {
+function ProblemCard(props) {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ width: 250 }}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
-              alt="green iguana"
+              image={ props.img }
+              alt={ props.title }
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Lizard
+                { props.title }
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica
+                { props.describe }
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button size="small" color="primary">
-              Share
+              View
             </Button>
           </CardActions>
         </Card>
       );
 }
 
-export {menuCard, problemCard};
+export {MenuCard, ProblemCard};
