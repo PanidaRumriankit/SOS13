@@ -18,17 +18,18 @@ sup {
   vertical-align: super;
 }
 
-.rowcard {
+/* .rowcard {
   display: flex;
   height: 50vh;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin: 0px;
 }
 
 @media (max-width: 1064px) {
   .rowcard {
     flex-direction: column;
   }
-}
+} */

@@ -1,7 +1,7 @@
 const navLinks = [
-  { name: "Problems", href: "#", current: false, icon: "", description: "" },
-  { name: "FAQ", href: "#", current: false, icon: "", description: "" },
-  { name: "Contacts", href: "#", current: false, icon: "", description: "" },
+  { name: "Problems", link: "./Problemspage.tsx", current: false, icon: "", description: "" },
+  { name: "FAQ", link: "#", current: false, icon: "", description: "" },
+  { name: "Contacts", link: "#", current: false, icon: "", description: "" },
 ];
 
 const slides = [
@@ -15,5 +15,4 @@ const problems = [
   { title: "", describe: "", link: "", img: "", id: 1 }
 ];
 
-export default navLinks;
-export { slides, problems };
+export { navLinks, slides, problems };

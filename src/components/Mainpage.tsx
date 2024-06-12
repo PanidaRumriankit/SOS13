@@ -4,14 +4,15 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import { MenuCard } from "./cards";
-import navlink from "../constants/index";
+import { navLinks, slides } from "../constants/index";
+import CreateSlides from "./Slides";
 
 export default function Mainpage() {
   return (
     <Box
-      id="hero"
+      id="main"
       sx={(theme) => ({
         width: '100%',
         backgroundImage:
@@ -63,18 +64,26 @@ export default function Mainpage() {
             Welcome to SOS13th camp. This camp is designed to equip you with the skills, knowledge, and connection
             with friends. Hope you enjoy all the things we have prepared for you.
           </Typography>
-          <div className="rowcard">
-            {navlink.map((item) => (
-                <MenuCard icon={ item.icon } name={ item.name } description={ item.description } />
+
+          <ButtonGroup variant="outlined" aria-label="Basic button group" sx={{ alignSelf: "center" }} size="large">
+            {slides.map((item) => (
+                <CreateSlides name={ item.name } link={ item.link } />
             ))}
-        </div>
+          </ButtonGroup>
+
+          <Box sx={{ 
+            display: "flex", 
+            flexWrap: "wrap", 
+            justifyContent: "space-around", 
+            flexDirection: "row", 
+            alignItems: "center",
+            gap: "1rem"}}>
+            {navLinks.map((item) => (
+                <MenuCard icon={ item.icon } name={ item.name } description={ item.description } link={ item.link } />
+            ))}
+          </Box>
         </Stack>
-
       </Container>
-      
-      {/* <Grid item xs={12} md={6}> */}
-
-      {/* </Grid> */}
     </Box>
   );
 }

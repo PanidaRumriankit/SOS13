@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 function MenuCard(props) {
     return (
         <Card sx={{ width: 250 }}>
-          <CardActionArea>
+          <CardActionArea href={ props.link }>
             <CardMedia
               component="img"
               height="140"
