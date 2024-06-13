@@ -13,19 +13,27 @@ const slides = [
 
 const problems = [
   { title: "print()",
-    describe: "Day1",
+    describe: "This problem will help you understand how to use print() function in Python.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/9k7wrh59oh/",
     img: "",
     id: 1 
   },
 
+  { title: "Datatype",
+    describe: "ไง",
+    day: 1,
+    link: "",
+    img: "",
+    id: 2 
+  },
+
   { title: "Basic Operations 1",
-    describe: "Day1",
+    describe: "ระหว่างแอปเปิลกับอิชิ ใครกินแอปเปิลมากกว่ากัน สงสัยใช่มั๊ยล่ะ? ลองทำโจทย์ข้อนี้ดูสิ",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/ovus65cebm/",
     img: "",
-    id: 2 
+    id: 3 
   },
 
   { title: "Basic Operations 2",
@@ -33,7 +41,7 @@ const problems = [
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/5chqulocvs/",
     img: "",
-    id: 3 
+    id: 4 
   }
 ];
 
