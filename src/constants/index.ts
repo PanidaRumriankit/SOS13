@@ -12,7 +12,12 @@ const slides = [
 ];
 
 const problems = [
-  { title: "", describe: "", link: "", img: "", id: 1 }
+  { title: "",
+    describe: "day1",
+    day: 1,
+    link: "",
+    img: "",
+    id: 1 }
 ];
 
 export { navLinks, slides, problems };
