@@ -20,10 +20,10 @@ const problems = [
     id: 1 
   },
 
-  { title: "Datatype",
+  { title: "Data Type",
     describe: "ไง",
     day: 1,
-    link: "",
+    link: "https://elabsheet.org/elab/taskpads/show/kh2161it3m/",
     img: "",
     id: 2 
   },
