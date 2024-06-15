@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import navlink from "../constants/index";
+import { navLinks } from "../constants/index";
 import {
   Disclosure,
   DisclosureButton,
@@ -16,7 +16,13 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbars(page) {
+  for (let i = 0; i < 3; i++) {
+    if (page.page === navLinks[i].link) {
+      navLinks[i].current = true;
+    }
+  }
+  
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -45,10 +51,10 @@ export default function Example() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navlink.map((item) => (
+                    {navLinks.map((item) => (
                       <a
                         key={item.name}
-                        href={item.href}
+                        href={item.link}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -68,11 +74,11 @@ export default function Example() {
 
           <DisclosurePanel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navlink.map((item) => (
+              {navLinks.map((item) => (
                 <DisclosureButton
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  href={item.link}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"

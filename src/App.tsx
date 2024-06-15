@@ -1,11 +1,15 @@
 import { useState } from "react";
-import Navbar from "./components/Navbars";
+import { Route, Routes } from 'react-router-dom';
+import Problemspage from "./components/Problemspage"
 import Mainpage from "./components/Mainpage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <Mainpage />;
+  return (
+    <Routes>
+      <Route path="/" element={<Mainpage />} />
+      <Route path="/Problemspage" element={<Problemspage />} />
+    </Routes>
+  );
 }
 
 export default App;

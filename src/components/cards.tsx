@@ -3,34 +3,47 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function MenuCard(props) {
-    return (
-        <Card sx={{ width: 250 }}>
-          <CardActionArea href={ props.link }>
-            <CardMedia
-              component="img"
-              height="140"
-              image={ props.icon }
-              alt={ props.name }
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                { props.name }
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                { props.description }
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      );
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(props.link);
+  };
+  
+  return (
+      <Card sx={{ width: 250 }}>
+        <CardActionArea onClick={handleClick}>
+        <CardMedia
+            component="img"
+            height="140"
+            image={ props.icon }
+            alt={ props.name }
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              { props.name }
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              { props.description }
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    );
 }
 
 function ProblemCard(props) {
+
+  const handleClick = () => {
+    window.location.href = props.link;
+  };
+
+  console.log(props.link);
+
     return (
         <Card sx={{ width: 250 }}>
-          <CardActionArea>
             <CardMedia
               component="img"
               height="140"
@@ -39,15 +52,14 @@ function ProblemCard(props) {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                { props.title }
+                { props.key + " " + props.title }
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 { props.describe }
               </Typography>
             </CardContent>
-          </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
+            <Button size="small" color="primary" onClick={handleClick}>
               View
             </Button>
           </CardActions>
