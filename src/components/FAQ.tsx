@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import './FAQ.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { alpha } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Navbars from './Navbars';
+import Footer from './Footer';
 
 interface FAQItem {
   section: string;
@@ -76,6 +81,8 @@ const FAQ: React.FC = () => {
   // Use an object to store active indices for each section
   const [activeIndices, setActiveIndices] = useState<Record<string, number | null>>({});
 
+  const current_page = "/FAQ";
+
   // Function to toggle accordion for a specific section and index
   const toggleAccordion = (section: string, index: number) => {
     setActiveIndices(prevState => ({
@@ -91,31 +98,61 @@ const FAQ: React.FC = () => {
   }, {});
 
   return (
-    <div className="wrapper">
-      <h1>Frequently Asked Questions</h1>
-      {Object.keys(groupedFAQs).map((section, sectionIndex) => (
-        <div key={sectionIndex}>
-          <h2>{section}</h2>
-          {groupedFAQs[section].map((item, index) => (
-            <div className="faq" key={index}>
-              <button
-                className={`accordion ${activeIndices[section] === index ? 'active' : ''}`}
-                onClick={() => toggleAccordion(section, index)}
-              >
-                {item.question}
-                <FontAwesomeIcon icon={faChevronDown} />
-              </button>
-              <div
-                className="panel"
-                style={{ display: activeIndices[section] === index ? 'block' : 'none' }}
-              >
-                <p>{item.answer}</p>
-              </div>
+    <Box
+      id="FAQ"
+      sx={(theme) => ({
+        width: '100%',
+        backgroundImage:
+          theme.palette.mode === 'light'
+            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
+            : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
+        backgroundSize: '100% 50%',
+        backgroundRepeat: 'no-repeat',
+        color: (theme) =>
+                    theme.palette.mode === 'light' ? 'primary.main' : 'primary.light'
+      })}
+      className="pt-16"
+    >
+      <Navbars page={ current_page }/>
+      <Container
+          sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          pt: { xs: 4, sm: 8 },
+          pb: { xs: 4, sm: 8 },
+          }}
+      >
+        <div className="wrapper">
+          <h1>Frequently Asked Questions</h1>
+          {Object.keys(groupedFAQs).map((section, sectionIndex) => (
+            <div key={sectionIndex}>
+              <h2>{section}</h2>
+              {groupedFAQs[section].map((item, index) => (
+                <div className="faq" key={index}>
+                  <button
+                    className={`accordion ${activeIndices[section] === index ? 'active' : ''}`}
+                    onClick={() => toggleAccordion(section, index)}
+                  >
+                    {item.question}
+                    <FontAwesomeIcon icon={faChevronDown} />
+                  </button>
+                  <div
+                    className="panel"
+                    style={{ display: activeIndices[section] === index ? 'block' : 'none' }}
+                  >
+                    <p>{item.answer}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
-      ))}
-    </div>
+      </Container>
+      <Footer />
+    </Box>
+
+
+    
   );
 };
 
