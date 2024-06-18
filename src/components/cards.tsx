@@ -53,7 +53,6 @@ function ProblemCard(props) {
   function handleCheckbox() {
     status[props.id] = !(isChecked);
     localStorage.setItem('status', JSON.stringify(status));
-    console.log(status);
     checkHandler();
   };
 

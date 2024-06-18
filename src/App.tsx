@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Route, Routes } from 'react-router-dom';
 import Problemspage from "./components/Problemspage"
 import Mainpage from "./components/Mainpage";
-import FAQ from './FAQ';
-import Contacts from "./Contacts";
+import FAQ from './components/FAQ';
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
