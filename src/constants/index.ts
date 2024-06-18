@@ -117,6 +117,57 @@ const problems = [
     img: "",
     id: 13
   },
+  
+  /*Day 2 begin!! fighto!! */
+
+  { title: "List Items",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/gxo0ktgcvy/",
+    img: "",
+    id: 14
+  },
+
+  { title: "List Sorting",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/we4myj3drv/",
+    img: "",
+    id: 15
+  },
+
+  { title: "List to String Conversion",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/wogn44ajmx/",
+    img: "",
+    id: 16
+  },
+
+  { title: "pop() remove() and append()",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
+    img: "",
+    id: 17
+  },
+  
+  { title: "pop() remove() and append()",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
+    img: "",
+    id: 17
+  },
+
+  { title: "Tuple",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/tfxrviqbau/",
+    img: "",
+    id: 18
+  },
+
 ];
 
 
@@ -217,6 +268,41 @@ Ichi will come to your house at 5 a.m. if you modifly it.*/
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/change/zu42rs2ez1/md250emcyo/",
     id: 13
+  },
+
+  {
+    title: "List Items",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/gxo0ktgcvy/ocisekfk01/",
+    id: 14
+  },
+
+  {
+    title: "List Sorting",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/we4myj3drv/ul6izx64v6/",
+    id: 15
+  },
+
+  {
+    title: "List to String Conversion",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/wogn44ajmx/tsfib4gn5w/",
+    id: 16
+  },
+
+  {
+    title: "pop() remove() and append()",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/oc6wbu3lox/jerrmfwcna/",
+    id: 17
+  },
+
+  {
+    title: "Tuple",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/tfxrviqbau/ko15r63jav/",
+    id: 18
   },
 
 
