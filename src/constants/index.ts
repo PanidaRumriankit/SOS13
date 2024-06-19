@@ -168,6 +168,38 @@ const problems = [
     id: 18
   },
 
+  { title: "Set",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/r0bmxvjeai/",
+    img: "",
+    id: 19
+  },
+
+  { title: "Dict 1",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/538inm6ad9/",
+    img: "",
+    id: 20
+  },
+
+  { title: "Dict 2",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/b4wa4fy33d/",
+    img: "",
+    id: 21
+  },
+
+  { title: "Dict 3",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/fee4ktlb4m/",
+    img: "",
+    id: 22
+  },
+
 ];
 
 
@@ -303,6 +335,34 @@ Ichi will come to your house at 5 a.m. if you modifly it.*/
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/change/tfxrviqbau/ko15r63jav/",
     id: 18
+  },
+
+  {
+    title: "Set",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/r0bmxvjeai/ofu4k1y5rw/",
+    id: 19
+  },
+
+  {
+    title: "Dict 1",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/538inm6ad9/ag39nb4icb/",
+    id: 20
+  },
+
+  {
+    title: "Dict 2",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/b4wa4fy33d/581tr5ur8z/",
+    id: 21
+  },
+
+  {
+    title: "Dict 3",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/fee4ktlb4m/99yqhoudx8/",
+    id: 22
   },
 
 
