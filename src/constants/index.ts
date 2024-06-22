@@ -199,6 +199,48 @@ const problems = [
     img: "",
     id: 22
   },
+  
+  // Day 3 Let's go!!
+
+  { title: "if-else",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/3nc6lrir1p/",
+    img: "",
+    id: 23
+  },
+
+  { title: "Banaifelse",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/civv6hoa3k/",
+    img: "",
+    id: 24
+  },
+
+  { title: "For-loop",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/e9x4ceit4e/",
+    img: "",
+    id: 25
+  },
+
+  { title: "Filter The Document",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/hntk8jfwne/",
+    img: "",
+    id: 26
+  },
+
+  { title: "While-loop",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/4yio2aorp0/",
+    img: "",
+    id: 27
+  },
 
 ];
 
@@ -363,6 +405,41 @@ Ichi will come to your house at 5 a.m. if you modifly it.*/
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/change/fee4ktlb4m/99yqhoudx8/",
     id: 22
+  },
+
+  {
+    title: "if-else",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/3nc6lrir1p/taedv4uiub/",
+    id: 23
+  },
+
+  {
+    title: "Banaifelse",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/civv6hoa3k/ckxmtr7udh/",
+    id: 24
+  },
+
+  {
+    title: "For-loop",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/e9x4ceit4e/e47kdqjhcq/",
+    id: 25
+  },
+
+  {
+    title: "Filter The Document",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/hntk8jfwne/s1a59f0phu/",
+    id: 26
+  },
+
+  {
+    title: "While-loop",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/4yio2aorp0/pkurian4tz/",
+    id: 27
   },
 
 
