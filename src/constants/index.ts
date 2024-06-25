@@ -151,14 +151,6 @@ const problems = [
     img: "",
     id: 17
   },
-  
-  { title: "pop() remove() and append()",
-    describe: "Add later",
-    day: 2,
-    link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
-    img: "",
-    id: 17
-  },
 
   { title: "Tuple",
     describe: "Add later",
