@@ -117,6 +117,131 @@ const problems = [
     img: "",
     id: 13
   },
+  
+  /*Day 2 begin!! fighto!! */
+
+  { title: "List Items",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/gxo0ktgcvy/",
+    img: "",
+    id: 14
+  },
+
+  { title: "List Sorting",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/we4myj3drv/",
+    img: "",
+    id: 15
+  },
+
+  { title: "List to String Conversion",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/wogn44ajmx/",
+    img: "",
+    id: 16
+  },
+
+  { title: "pop() remove() and append()",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
+    img: "",
+    id: 17
+  },
+  
+  { title: "pop() remove() and append()",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
+    img: "",
+    id: 17
+  },
+
+  { title: "Tuple",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/tfxrviqbau/",
+    img: "",
+    id: 18
+  },
+
+  { title: "Set",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/r0bmxvjeai/",
+    img: "",
+    id: 19
+  },
+
+  { title: "Dict 1",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/538inm6ad9/",
+    img: "",
+    id: 20
+  },
+
+  { title: "Dict 2",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/b4wa4fy33d/",
+    img: "",
+    id: 21
+  },
+
+  { title: "Dict 3",
+    describe: "Add later",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/show/fee4ktlb4m/",
+    img: "",
+    id: 22
+  },
+  
+  // Day 3 Let's go!!
+
+  { title: "if-else",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/3nc6lrir1p/",
+    img: "",
+    id: 23
+  },
+
+  { title: "Banaifelse",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/civv6hoa3k/",
+    img: "",
+    id: 24
+  },
+
+  { title: "For-loop",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/e9x4ceit4e/",
+    img: "",
+    id: 25
+  },
+
+  { title: "Filter The Document",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/hntk8jfwne/",
+    img: "",
+    id: 26
+  },
+
+  { title: "While-loop",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/4yio2aorp0/",
+    img: "",
+    id: 27
+  },
+
 ];
 
 
@@ -217,6 +342,104 @@ Ichi will come to your house at 5 a.m. if you modifly it.*/
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/change/zu42rs2ez1/md250emcyo/",
     id: 13
+  },
+
+  {
+    title: "List Items",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/gxo0ktgcvy/ocisekfk01/",
+    id: 14
+  },
+
+  {
+    title: "List Sorting",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/we4myj3drv/ul6izx64v6/",
+    id: 15
+  },
+
+  {
+    title: "List to String Conversion",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/wogn44ajmx/tsfib4gn5w/",
+    id: 16
+  },
+
+  {
+    title: "pop() remove() and append()",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/oc6wbu3lox/jerrmfwcna/",
+    id: 17
+  },
+
+  {
+    title: "Tuple",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/tfxrviqbau/ko15r63jav/",
+    id: 18
+  },
+
+  {
+    title: "Set",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/r0bmxvjeai/ofu4k1y5rw/",
+    id: 19
+  },
+
+  {
+    title: "Dict 1",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/538inm6ad9/ag39nb4icb/",
+    id: 20
+  },
+
+  {
+    title: "Dict 2",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/b4wa4fy33d/581tr5ur8z/",
+    id: 21
+  },
+
+  {
+    title: "Dict 3",
+    day: 2,
+    link: "https://elabsheet.org/elab/taskpads/change/fee4ktlb4m/99yqhoudx8/",
+    id: 22
+  },
+
+  {
+    title: "if-else",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/3nc6lrir1p/taedv4uiub/",
+    id: 23
+  },
+
+  {
+    title: "Banaifelse",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/civv6hoa3k/ckxmtr7udh/",
+    id: 24
+  },
+
+  {
+    title: "For-loop",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/e9x4ceit4e/e47kdqjhcq/",
+    id: 25
+  },
+
+  {
+    title: "Filter The Document",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/hntk8jfwne/s1a59f0phu/",
+    id: 26
+  },
+
+  {
+    title: "While-loop",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/4yio2aorp0/pkurian4tz/",
+    id: 27
   },
 
 
