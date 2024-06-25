@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://panidarumriankit.github.io/SOS13/",
+  "homepage": "https://github.com/PanidaRumriankit/SOS13",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
