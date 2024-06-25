@@ -37,13 +37,13 @@ function MenuCard(props) {
 function ProblemCard(props) {
 
   const handleClick = () => {
-    window.location.href = props.link;
+    window.open(props.link, '_blank');
   };
 
   console.log(props.link);
 
     return (
-        <Card sx={{ width: 250 }}>
+        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <CardMedia
               component="img"
               height="140"
@@ -52,7 +52,7 @@ function ProblemCard(props) {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                { props.key + " " + props.title }
+                { props.id + " " + props.title }
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 { props.describe }

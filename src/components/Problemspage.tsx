@@ -5,8 +5,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Navbars from './Navbars';
-import { problems } from "../constants/index";
-import { ProblemCard } from './cards';
+import NavProblem from './NavDay';
 
 export default function Problempage() {
   const current_page = "/Problemspage";
@@ -35,7 +34,8 @@ export default function Problempage() {
         pb: { xs: 4, sm: 8 },
         }}
     >
-      <Typography
+      <NavProblem />
+      {/* <Typography
         variant="h1"
         sx={{
           display: 'flex',
@@ -54,9 +54,9 @@ export default function Problempage() {
       justifyContent: 'flex-start'
       }}>
       {  problems.map((problem) => [
-          <ProblemCard title={ problem.title } describe={ problem.describe } link={ problem.link } img={ problem.img } key={ problem.id } />
+          <ProblemCard title={ problem.title } describe={ problem.describe } link={ problem.link } img={ problem.img } id={ problem.id } />
         ])}
-      </Box>
+      </Box> */}
     </Container>
   </Box>
   )
