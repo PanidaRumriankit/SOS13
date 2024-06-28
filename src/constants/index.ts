@@ -5,10 +5,9 @@ const navLinks = [
 ];
 
 const slides = [
-  { name: "Introduction", link: "" },
-  { name: "Day1", link: "" },
-  { name: "Day2", link: "" },
-  { name: "Day3", link: "" }
+  { name: "Day1", link: "https://www.canva.com/design/DAGHDuMEA0Q/LfP5NJIESQa3wb7ln4uPNw/edit?utm_content=DAGHDuMEA0Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" },
+  { name: "Day2", link: "https://www.canva.com/design/DAGH5yooEBg/5cEyLxrY9OUq_XJlUKOz9g/view?utm_content=DAGH5yooEBg&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+  { name: "Day3", link: "https://www.canva.com/design/DAGIp5fK_ik/II51RqZy-BNtzVToBr0CBg/view?utm_content=DAGIp5fK_ik&utm_campaign=designshare&utm_medium=link&utm_source=editor" }
 ];
 
 const problems = [
