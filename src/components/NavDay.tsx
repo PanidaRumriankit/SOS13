@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import { useState } from 'react';
 import { ProblemCard } from './cards';
 import { problems } from "../constants/index";
 import { AppBar, Toolbar, Button, Typography, Container, Box } from '@mui/material';

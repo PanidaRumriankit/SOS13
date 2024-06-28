@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Navbars from './Navbars';
 import NavProblem from './NavDay';
+import Footer from './Footer';
 
 export default function Problempage() {
   const current_page = "/Problemspage";
@@ -24,6 +25,7 @@ export default function Problempage() {
       color: (theme) =>
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light'
     })}
+    className="pt-16"
   >
     <Navbars page={ current_page }/>
     <Container
@@ -35,29 +37,8 @@ export default function Problempage() {
         }}
     >
       <NavProblem />
-      {/* <Typography
-        variant="h1"
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          fontSize: 'clamp(3.5rem, 10vw, 4rem)',
-        }}
-      >
-        Problems
-      </Typography>
-
-      <Box sx={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      gap: 4,
-      pt: { xs: 2, sm: 4 },
-      justifyContent: 'flex-start'
-      }}>
-      {  problems.map((problem) => [
-          <ProblemCard title={ problem.title } describe={ problem.describe } link={ problem.link } img={ problem.img } id={ problem.id } />
-        ])}
-      </Box> */}
     </Container>
+    <Footer />
   </Box>
   )
 }

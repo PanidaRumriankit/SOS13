@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { navLinks } from "../constants/index";
+import logo from "../assets/logo.png";
 import {
   Disclosure,
   DisclosureButton,
@@ -11,6 +12,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -22,9 +24,15 @@ export default function Navbars(page) {
       navLinks[i].current = true;
     }
   }
+
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 fixed w-full z-50 top-0">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -44,9 +52,10 @@ export default function Navbars(page) {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    className="h-8 w-auto cursor-pointer"
+                    src={logo}
+                    alt="logo"
+                    onClick={handleLogoClick}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
