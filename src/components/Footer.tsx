@@ -47,21 +47,21 @@ export default function Footer() {
         >
             <BottomNavigation sx={{ width: 500 }} value={value} onChange={handleChange}>
                 <BottomNavigationAction
-                label="Instagram"
+                label="sos_camp13"
                 value="instagram"
                 icon={<InstagramIcon />}
                 onMouseEnter={() => handleMouseEnter('instagram')}
                 onMouseLeave={handleMouseLeave}
                 />
                 <BottomNavigationAction
-                label="Discord"
+                label="บ้านน้อนske22"
                 value="discord"
                 icon={<DiscordIcon />}
                 onMouseEnter={() => handleMouseEnter('discord')}
                 onMouseLeave={handleMouseLeave}
                 />
                 <BottomNavigationAction
-                label="Github"
+                label="SOS13"
                 value="github"
                 icon={<GitHubIcon />}
                 onMouseEnter={() => handleMouseEnter('github')}

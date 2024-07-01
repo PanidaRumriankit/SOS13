@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 function MenuCard(props) {
@@ -59,9 +59,12 @@ function ProblemCard(props) {
               </Typography>
             </CardContent>
           <CardActions>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <Button size="small" color="primary" onClick={handleClick}>
               View
             </Button>
+            <Checkbox />
+          </Box>
           </CardActions>
         </Card>
       );
