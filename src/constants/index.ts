@@ -1,6 +1,6 @@
 const navLinks = [
   { name: "Problems", link: "/Problemspage", current: false, icon: "", description: "" },
-  { name: "FAQ", link: "#", current: false, icon: "", description: "" },
+  { name: "FAQ", link: "/FAQ", current: false, icon: "", description: "" },
   { name: "Contacts", link: "#", current: false, icon: "", description: "" },
 ];
 
