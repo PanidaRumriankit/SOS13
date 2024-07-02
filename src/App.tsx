@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Route, Routes } from 'react-router-dom';
 import Problemspage from "./components/Problemspage"
 import Mainpage from "./components/Mainpage";
-import FAQ from './FAQ';
+import FAQ from './components/FAQ';
 
 function App() {
   return (

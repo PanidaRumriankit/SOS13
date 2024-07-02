@@ -5,24 +5,39 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import Button from '@mui/material/Button';
 import { MenuCard } from "./cards";
 import { navLinks, slides } from "../constants/index";
 import CreateSlides from "./Slides";
+import starburst from '../assets/star_burst.mp4'
 
 export default function Mainpage() {
   return (
     <Box
       id="main"
       sx={(theme) => ({
+        position: 'relative',
         width: '100%',
-        backgroundImage:
-          theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-            : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
-        backgroundSize: '100% 50%',
-        backgroundRepeat: 'no-repeat',
+        height: '100vh',
+        overflow: 'hidden',
       })}
     >
+      <video
+        autoPlay
+        muted
+        loop
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1
+        }}
+      >
+        <source src={starburst} type="video/mp4" />
+      </video>
       <Container
         sx={{
           display: 'flex',
@@ -41,6 +56,7 @@ export default function Mainpage() {
               alignSelf: 'center',
               textAlign: 'center',
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
+              color: 'white'
             }}
           >
             SOS&nbsp;
@@ -58,7 +74,7 @@ export default function Mainpage() {
           </Typography>
           <Typography
             textAlign="center"
-            color="text.secondary"
+            color="white"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
             Welcome to SOS13th camp. This camp is designed to equip you with the skills, knowledge, and connection
@@ -67,7 +83,7 @@ export default function Mainpage() {
 
           <ButtonGroup variant="outlined" aria-label="Basic button group" sx={{ alignSelf: "center" }} size="large">
             {slides.map((item) => (
-                <CreateSlides name={ item.name } link={ item.link } />
+                <CreateSlides name={item.name} link={item.link} />
             ))}
           </ButtonGroup>
 
