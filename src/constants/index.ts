@@ -152,14 +152,6 @@ const problems = [
     id: 17
   },
   
-  { title: "pop() remove() and append()",
-    describe: "Add later",
-    day: 2,
-    link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
-    img: "",
-    id: 17
-  },
-
   { title: "Tuple",
     describe: "Add later",
     day: 2,
@@ -242,14 +234,77 @@ const problems = [
     id: 27
   },
 
+  { title: "List Comprehension",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/c3e8udk2mp/",
+    img: "",
+    id: 28
+  },
+
+  { title: "(Extra) Dict Comprehension",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/ipijjeghzz/",
+    img: "",
+    id: 29
+  },
+
+  { title: "Function",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/qiqqirlgvk/",
+    img: "",
+    id: 30
+  },
+
+  { title: "Chasing Down The Killer",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/p8ni6s863c/",
+    img: "",
+    id: 31
+  },
+
+  { title: "(Extra) List-String Converter",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/jfl5l0tpka/",
+    img: "",
+    id: 32
+  },
+
+  { title: "Module",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/fbud4i79vz/",
+    img: "",
+    id: 33
+  },
+
+  { title: "(Extra) The Shattered Veil",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/hz9ikrrrab/",
+    img: "",
+    id: 34
+  },
+
+  { title: "(Extra) Final Confrontation: The Abyss Unleashed",
+    describe: "Add later",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/show/xyl7u0sq38/",
+    img: "",
+    id: 35
+  },
+
 ];
 
-
-const for_sos14 = [
-/*Hi, My junior for_sos14 const is used for store modifiable Elab code. 
-If SOS14 is coming and you have no idea how to write Elab problems. You can use these Elab links to see my Elab codes.
-However, don't modifly my code only modifly your own code. It will affects SOS13 problems if you modify it. (I'm not sure.) 
-Ichi will come to your house at 5 a.m. if you modifly it.*/
+const elab_exercise_source_code = [
+  /*Dear my junior.
+  Do not modifly these code if you modifly it. It will affects SOS13 problems.
+  Scroll down to see for_sos14 const you can use the link at the for_sos14 const to clone my exercise.
+  Ichi will come to your house at 5 a.m. if you modifly the code in these link.*/
 
   {
     title: "print()",
@@ -441,6 +496,75 @@ Ichi will come to your house at 5 a.m. if you modifly it.*/
     link: "https://elabsheet.org/elab/taskpads/change/4yio2aorp0/pkurian4tz/",
     id: 27
   },
+
+  {
+    title: "List Comprehension",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/c3e8udk2mp/962eb817dv/",
+    id: 28
+  },
+  
+  {
+    title: "(Extra) Dict Comprehension",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/ipijjeghzz/ubjbg6p5r5/",
+    id: 29
+  },
+
+  {
+    title: "Function",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/qiqqirlgvk/g74n4y1zor/",
+    id: 30
+  },
+
+  {
+    title: "Chasing Down The Killer",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/p8ni6s863c/330fkqjx5l/",
+    id: 31
+  },
+
+  {
+    title: "(Extra) List-String Converter",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/jfl5l0tpka/5q5m4hp9ru/",
+    id: 32
+  },
+
+  {
+    title: "Module",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/fbud4i79vz/ddu0lamfbd/",
+    id: 33
+  },
+
+  {
+    title: "(Extra) The Shattered Veil",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/hz9ikrrrab/t3vx8pbuxd/",
+    id: 34
+  },
+
+  {
+    title: "(Extra) Final Confrontation: The Abyss Unleashed",
+    day: 3,
+    link: "https://elabsheet.org/elab/taskpads/change/xyl7u0sq38/blwgr6utdy/",
+    id: 35
+  },
+
+
+
+  
+]
+
+const for_sos14 = [
+/*Hi, My junior for_sos14 const is used for store cloneable Elab code. 
+If SOS14 is coming and you have no idea how to write Elab problems. You can use these Elab links to see my Elab codes by cloning it.
+However, don't modifly my code at elab_exercise_source_code only modifly your copy code.*/
+
+ 
+
 
 
 ];
