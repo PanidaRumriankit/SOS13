@@ -1,14 +1,13 @@
 const navLinks = [
-  { name: "Problems", link: "./Problemspage.tsx", current: false, icon: "", description: "" },
-  { name: "FAQ", link: "#", current: false, icon: "", description: "" },
+  { name: "Problems", link: "/Problemspage", current: false, icon: "", description: "" },
+  { name: "FAQ", link: "/FAQ", current: false, icon: "", description: "" },
   { name: "Contacts", link: "#", current: false, icon: "", description: "" },
 ];
 
 const slides = [
-  { name: "Introduction", link: "" },
-  { name: "Day1", link: "" },
-  { name: "Day2", link: "" },
-  { name: "Day3", link: "" }
+  { name: "Day1", link: "https://www.canva.com/design/DAGHDuMEA0Q/v4TSfftbxOHk4d_QXOPpuA/view?utm_content=DAGHDuMEA0Q&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+  { name: "Day2", link: "https://www.canva.com/design/DAGH5yooEBg/5cEyLxrY9OUq_XJlUKOz9g/view?utm_content=DAGH5yooEBg&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+  { name: "Day3", link: "https://www.canva.com/design/DAGIp5fK_ik/II51RqZy-BNtzVToBr0CBg/view?utm_content=DAGIp5fK_ik&utm_campaign=designshare&utm_medium=link&utm_source=editor" }
 ];
 
 const problems = [

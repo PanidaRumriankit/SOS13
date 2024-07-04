@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import navlink from "../constants/index";
+import { navLinks } from "../constants/index";
+import logo from "../assets/logo.png";
 import {
   Disclosure,
   DisclosureButton,
@@ -11,14 +12,27 @@ import {
   Transition,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbars(page) {
+  for (let i = 0; i < 3; i++) {
+    if (page.page === navLinks[i].link) {
+      navLinks[i].current = true;
+    }
+  }
+
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/");
+  };
+  
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 fixed w-full z-50 top-0">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,17 +52,18 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    className="h-8 w-auto cursor-pointer"
+                    src={logo}
+                    alt="logo"
+                    onClick={handleLogoClick}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navlink.map((item) => (
+                    {navLinks.map((item) => (
                       <a
                         key={item.name}
-                        href={item.href}
+                        href={item.link}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -68,11 +83,11 @@ export default function Example() {
 
           <DisclosurePanel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navlink.map((item) => (
+              {navLinks.map((item) => (
                 <DisclosureButton
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  href={item.link}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
