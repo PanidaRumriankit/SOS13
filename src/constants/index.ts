@@ -28,7 +28,7 @@ const problems = [
   },
 
   { title: "Basic Operations 1",
-    describe: "The problem will include +, -, * operations",
+    describe: "You will learn how to use +, -, * operations on str and int.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/ovus65cebm/",
     img: "",
@@ -36,7 +36,7 @@ const problems = [
   },
 
   { title: "Basic Operations 2",
-    describe: "The problem will include /, //, % operations",
+    describe: "You will learn how to use /, //, % operation on str and int.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/5chqulocvs/",
     img: "",
@@ -44,7 +44,7 @@ const problems = [
   },
   
   { title: "Assigning",
-    describe: "Add later",
+    describe: "This problem will help you understand how to update the value of an existing variable.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/msz2huvw9x/",
     img: "",
@@ -52,7 +52,7 @@ const problems = [
   },
 
   { title: "Comparing",
-    describe: "Add later",
+    describe: "This problem will help you understand how to compare variables.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/kvotlm9c6j/",
     img: "",
@@ -61,7 +61,7 @@ const problems = [
 
   
   { title: "input() and Type Casting",
-    describe: "Add later",
+    describe: "This problem will help you understand how to use the input() function and learn how to convert the type of data.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/arh53gaa2u/",
     img: "",
@@ -70,7 +70,7 @@ const problems = [
 
 
   { title: "Length of String",
-    describe: "Add later",
+    describe: "You will learn how to adaptively use the len() function to solve this problem.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/5up5ks3qex/",
     img: "",
@@ -78,7 +78,7 @@ const problems = [
   },
 
   { title: "f-string",
-    describe: "Add later",
+    describe: "You will learn how to format strings to add other variables to str.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/vki2jny4ed/",
     img: "",
@@ -86,7 +86,7 @@ const problems = [
   },
 
   { title: "Comment",
-    describe: "Add later",
+    describe: "You will learn how to comment to handle error.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/p89oazjhhe/",
     img: "",
@@ -94,7 +94,7 @@ const problems = [
   },
 
   { title: "String Modifying 1",
-    describe: "Add later",
+    describe: "This lesson will show you how to eliminate unwanted items from a string.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/q0z9certb8/",
     img: "",
@@ -102,7 +102,7 @@ const problems = [
   },
 
   { title: "String Modifying 2",
-    describe: "Add later",
+    describe: "This lesson will show you how to convert str to list and teach you how to remove leading, and trailing value in str.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/82yn4woz6a/",
     img: "",
@@ -110,7 +110,7 @@ const problems = [
   },
 
   { title: "Data Slicing",
-    describe: "Add later",
+    describe: "Yeah slicing is slicing cut cut chop chop.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/zu42rs2ez1/",
     img: "",
@@ -120,7 +120,7 @@ const problems = [
   /*Day 2 begin!! fighto!! */
 
   { title: "List Items",
-    describe: "Add later",
+    describe: "This problem will help you understand how to acess and modify list items.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/gxo0ktgcvy/",
     img: "",
@@ -128,7 +128,7 @@ const problems = [
   },
 
   { title: "List Sorting",
-    describe: "Add later",
+    describe: "Sort is not Sauce and it not Sword.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/we4myj3drv/",
     img: "",
@@ -136,7 +136,7 @@ const problems = [
   },
 
   { title: "List to String Conversion",
-    describe: "Add later",
+    describe: "You will learn how to convert list to str from this problem.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/wogn44ajmx/",
     img: "",
@@ -144,7 +144,7 @@ const problems = [
   },
 
   { title: "pop() remove() and append()",
-    describe: "Add later",
+    describe: "This problem will help you understand how to use various list methods.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
     img: "",
@@ -191,7 +191,7 @@ const problems = [
     id: 22
   },
   
-  // Day 3 Let's go!!
+  // Day 3 Let's go!! (I'M WANT TO REST.)
 
   { title: "if-else",
     describe: "Add later",
