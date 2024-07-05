@@ -9,16 +9,6 @@ export default function NavProblem() {
     const handleDayChange = (day) => {
       setSelectedDay(day);
     };
-
-    if (!localStorage.status) {
-      let status = new Map();
-      
-      for (let p=1; p<=problems.length; p++) {
-        status.set(p, false);
-      }
-      
-      localStorage.status = JSON.stringify(Array.from(status));
-    };
   
     const filteredProblems = problems.filter(problem => problem.day === selectedDay);
   

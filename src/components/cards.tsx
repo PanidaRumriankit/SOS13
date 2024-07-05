@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function MenuCard(props) {
@@ -36,23 +36,24 @@ function MenuCard(props) {
     );
 }
 
+const status = localStorage.status ? JSON.parse(localStorage.status) : {};
+
 function ProblemCard(props) {
+
+  const [isChecked, setIsChecked] = useState(status[props.id] ? status[props.id] : false);
+
+  const checkHandler = () => {
+    setIsChecked(!isChecked);
+  };
 
   const handleClick = () => {
     window.open(props.link, '_blank');
   };
 
-  const status = new Map(JSON.parse(localStorage.status));
-
-  const [isChecked, setIsChecked] = useState(status.get(props.id));
-  
-  const checkHandler = () => {
-    setIsChecked(!isChecked);
-  };
-
   function handleCheckbox() {
-    status.set(props.id, isChecked);
-    localStorage.status = JSON.stringify(Array.from(status));
+    status[props.id] = !(isChecked);
+    localStorage.setItem('status', JSON.stringify(status));
+    console.log(status);
     checkHandler();
   };
 
