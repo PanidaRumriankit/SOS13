@@ -4,6 +4,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 
 function MenuCard(props) {
   const navigate = useNavigate();
@@ -40,7 +42,21 @@ function ProblemCard(props) {
     window.open(props.link, '_blank');
   };
 
-  console.log(props.link);
+  const status = new Map(JSON.parse(localStorage.status));
+
+  const [isChecked, setIsChecked] = useState(status.get(props.id));
+  
+  const checkHandler = () => {
+    setIsChecked(!isChecked);
+  };
+
+  function handleCheckbox() {
+    status.set(props.id, isChecked);
+    localStorage.status = JSON.stringify(Array.from(status));
+    checkHandler();
+  };
+
+
 
     return (
         <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
@@ -63,7 +79,7 @@ function ProblemCard(props) {
             <Button size="small" color="primary" onClick={handleClick}>
               View
             </Button>
-            <Checkbox />
+            <Checkbox onChange={handleCheckbox} checked={isChecked}/>
           </Box>
           </CardActions>
         </Card>
