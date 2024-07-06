@@ -12,7 +12,7 @@ const slides = [
 
 const problems = [
   { title: "print()",
-    describe: "This problem will help you understand how to use print() function in Python.",
+    describe: "Learn how to use the print() function in Python to display output.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/9k7wrh59oh/",
     img: "",
@@ -20,7 +20,7 @@ const problems = [
   },
 
   { title: "Data Type",
-    describe: "This problem will help you understand basic Python variable type.",
+    describe: "Understand the basics of Python variable types through this problem.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/kh2161it3m/",
     img: "",
@@ -28,7 +28,7 @@ const problems = [
   },
 
   { title: "Basic Operations 1",
-    describe: "You will learn how to use +, -, * operations on str and int.",
+    describe:  "Explore the use of +, -, * operations on strings and integers.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/ovus65cebm/",
     img: "",
@@ -36,7 +36,7 @@ const problems = [
   },
 
   { title: "Basic Operations 2",
-    describe: "You will learn how to use /, //, % operation on str and int.",
+    describe: "Discover how to perform /, //, % operations on strings and integers.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/5chqulocvs/",
     img: "",
@@ -52,7 +52,7 @@ const problems = [
   },
 
   { title: "Comparing",
-    describe: "This problem will help you understand how to compare variables.",
+    describe: "Understand how to compare variables in Python.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/kvotlm9c6j/",
     img: "",
@@ -61,7 +61,7 @@ const problems = [
 
   
   { title: "input() and Type Casting",
-    describe: "This problem will help you understand how to use the input() function and learn how to convert the type of data.",
+    describe: "Master the input() function and type conversion techniques.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/arh53gaa2u/",
     img: "",
@@ -78,7 +78,7 @@ const problems = [
   },
 
   { title: "f-string",
-    describe: "You will learn how to format strings to add other variables to str.",
+    describe: "Discover how to format strings using f-strings in Python.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/vki2jny4ed/",
     img: "",
@@ -86,7 +86,7 @@ const problems = [
   },
 
   { title: "Comment",
-    describe: "You will learn how to comment to handle error.",
+    describe: "Learn how to use comments to handle errors in your code.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/p89oazjhhe/",
     img: "",
@@ -94,7 +94,7 @@ const problems = [
   },
 
   { title: "String Modifying 1",
-    describe: "This lesson will show you how to eliminate unwanted items from a string.",
+    describe: "Explore techniques to remove unwanted characters from a string.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/q0z9certb8/",
     img: "",
@@ -102,7 +102,7 @@ const problems = [
   },
 
   { title: "String Modifying 2",
-    describe: "This lesson will show you how to convert str to list and teach you how to remove leading, and trailing value in str.",
+    describe: "Learn how to convert strings to lists and remove leading/trailing characters.",
     day: 1,
     link: "https://elabsheet.org/elab/taskpads/show/82yn4woz6a/",
     img: "",
@@ -144,7 +144,7 @@ const problems = [
   },
 
   { title: "pop() remove() and append()",
-    describe: "This problem will help you understand how to use various list methods.",
+    describe: "Get familiar with various list methods like pop(), remove(), and append().",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/oc6wbu3lox/",
     img: "",
@@ -152,7 +152,7 @@ const problems = [
   },
   
   { title: "Tuple",
-    describe: "Add later",
+    describe: "Learn how to access and modify values within a tuple.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/tfxrviqbau/",
     img: "",
@@ -160,7 +160,7 @@ const problems = [
   },
 
   { title: "Set",
-    describe: "Add later",
+    describe: "Explore various methods for using sets in Python.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/r0bmxvjeai/",
     img: "",
@@ -168,7 +168,7 @@ const problems = [
   },
 
   { title: "Dict 1",
-    describe: "Add later",
+    describe: "Understand how to access and modify dictionary values.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/538inm6ad9/",
     img: "",
@@ -176,7 +176,7 @@ const problems = [
   },
 
   { title: "Dict 2",
-    describe: "Add later",
+    describe: "Learn to convert dictionary keys and values into lists using dict methods.",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/b4wa4fy33d/",
     img: "",
@@ -184,7 +184,7 @@ const problems = [
   },
 
   { title: "Dict 3",
-    describe: "Add later",
+    describe: "Why hamburger has banana in it?",
     day: 2,
     link: "https://elabsheet.org/elab/taskpads/show/fee4ktlb4m/",
     img: "",
@@ -194,7 +194,7 @@ const problems = [
   // Day 3 Let's go!! (I'M WANT TO REST.)
 
   { title: "if-else",
-    describe: "Add later",
+    describe: "You will learn how to use if-else in a function.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/3nc6lrir1p/",
     img: "",
@@ -202,7 +202,7 @@ const problems = [
   },
 
   { title: "Banaifelse",
-    describe: "Add later",
+    describe: "Make previous day code better!",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/civv6hoa3k/",
     img: "",
@@ -210,7 +210,7 @@ const problems = [
   },
 
   { title: "For-loop",
-    describe: "Add later",
+    describe: "You will learn how to use for-loop in these problems.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/e9x4ceit4e/",
     img: "",
@@ -218,7 +218,7 @@ const problems = [
   },
 
   { title: "Filter The Document",
-    describe: "Add later",
+    describe: "Gain a deeper understanding of for-loops with this problem.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/hntk8jfwne/",
     img: "",
@@ -226,7 +226,7 @@ const problems = [
   },
 
   { title: "While-loop",
-    describe: "Add later",
+    describe: "You will learn how to use while-loop in this problem.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/4yio2aorp0/",
     img: "",
@@ -234,7 +234,7 @@ const problems = [
   },
 
   { title: "List Comprehension",
-    describe: "Add later",
+    describe: "Simplify your code using list comprehensions.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/c3e8udk2mp/",
     img: "",
@@ -242,7 +242,7 @@ const problems = [
   },
 
   { title: "(Extra) Dict Comprehension",
-    describe: "Add later",
+    describe: "Learn to create dictionaries using a single line of code.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/ipijjeghzz/",
     img: "",
@@ -250,7 +250,7 @@ const problems = [
   },
 
   { title: "Function",
-    describe: "Add later",
+    describe: "Understand how to define and use functions in Python.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/qiqqirlgvk/",
     img: "",
@@ -258,7 +258,7 @@ const problems = [
   },
 
   { title: "Chasing Down The Killer",
-    describe: "Add later",
+    describe: "CREATE MORE FUNCTION.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/p8ni6s863c/",
     img: "",
@@ -266,7 +266,7 @@ const problems = [
   },
 
   { title: "(Extra) List-String Converter",
-    describe: "Add later",
+    describe: "Develop a program that converts between lists and strings.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/jfl5l0tpka/",
     img: "",
@@ -274,7 +274,7 @@ const problems = [
   },
 
   { title: "Module",
-    describe: "Add later",
+    describe: "Learn the basics of Python modules with this exercise.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/fbud4i79vz/",
     img: "",
@@ -282,7 +282,7 @@ const problems = [
   },
 
   { title: "(Extra) The Shattered Veil",
-    describe: "Add later",
+    describe: "Understand how to use the random module in Python.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/hz9ikrrrab/",
     img: "",
@@ -290,7 +290,7 @@ const problems = [
   },
 
   { title: "(Extra) Final Confrontation: The Abyss Unleashed",
-    describe: "Add later",
+    describe: "Create an auto-turn-based game in this project.",
     day: 3,
     link: "https://elabsheet.org/elab/taskpads/show/xyl7u0sq38/",
     img: "",
