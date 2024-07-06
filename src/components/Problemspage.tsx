@@ -8,6 +8,7 @@ import Navbars from './Navbars';
 import NavProblem from './NavDay';
 import Footer from './Footer';
 
+
 export default function Problempage() {
   const current_page = "/Problemspage";
 

@@ -73,12 +73,18 @@ const faqItems: FAQItem[] = [
 ];
 
 const FAQ: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  // Use an object to store active indices for each section
+  const [activeIndices, setActiveIndices] = useState<Record<string, number | null>>({});
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  // Function to toggle accordion for a specific section and index
+  const toggleAccordion = (section: string, index: number) => {
+    setActiveIndices(prevState => ({
+      ...prevState,
+      [section]: prevState[section] === index ? null : index,
+    }));
   };
 
+  // Group FAQs by section
   const groupedFAQs = faqItems.reduce((groups: Record<string, FAQItem[]>, item) => {
     (groups[item.section] = groups[item.section] || []).push(item);
     return groups;
@@ -93,15 +99,15 @@ const FAQ: React.FC = () => {
           {groupedFAQs[section].map((item, index) => (
             <div className="faq" key={index}>
               <button
-                className={`accordion ${activeIndex === index ? 'active' : ''}`}
-                onClick={() => toggleAccordion(index)}
+                className={`accordion ${activeIndices[section] === index ? 'active' : ''}`}
+                onClick={() => toggleAccordion(section, index)}
               >
                 {item.question}
                 <FontAwesomeIcon icon={faChevronDown} />
               </button>
               <div
                 className="panel"
-                style={{ display: activeIndex === index ? 'block' : 'none' }}
+                style={{ display: activeIndices[section] === index ? 'block' : 'none' }}
               >
                 <p>{item.answer}</p>
               </div>
