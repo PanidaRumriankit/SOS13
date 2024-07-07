@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Navbars from './Navbars';
 import Footer from './Footer';
+import Typography from '@mui/material/Typography';
+
 
 const Contacts: React.FC = () => {
   return (
@@ -58,7 +60,28 @@ function Contacts2() {
           pb: { xs: 4, sm: 8 },
           }}
       >
-        <div />
+        <div>
+          <Typography
+            textAlign="center"
+            color="black"
+            sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
+          >
+            มีปัญหาปรึกษาพี่
+          </Typography>
+          <Typography
+            textAlign="center"
+            variant="h2"
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignSelf: 'center',
+              fontSize: 'clamp(1.5rem, 5vw, 2rem)',
+              color: 'black'
+            }}
+          >
+            Contacts
+          </Typography>
+        </div>
       </Container>
       <Footer />
     </Box>
