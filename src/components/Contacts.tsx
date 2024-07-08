@@ -1,91 +1,113 @@
-import React from 'react';
-import './Contacts.css';
-import { alpha } from '@mui/material';
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbars from './Navbars';
 import Footer from './Footer';
-import Typography from '@mui/material/Typography';
 
+// TODO remove, this demo shouldn't need to reset the theme.
+const defaultTheme = createTheme();
 
-const Contacts: React.FC = () => {
-  return (
-    <div className="contacts-wrapper">
-      <h1>Contacts</h1>
-      <div className="contact-item">
-        <h2>Name1</h2>
-        <p>Facebook: name1</p>
-        <p>Instagram: @name1</p>
-      </div>
-      <div className="contact-item">
-        <h2>Name2</h2>
-        <p>Facebook: name2</p>
-        <p>Instagram: @name2</p>
-      </div>
-      <div className="contact-item">
-        <h2>Name3</h2>
-        <p>Facebook: name3</p>
-        <p>Instagram: @name3</p>
-      </div>
-    </div>
-  );
-};
-
-function Contacts2() {
-
+export default function SignUp() {
   const current_page = "/Contacts";
 
-  return (
-    <Box
-      id="contacts"
-      sx={(theme) => ({
-        width: '100%',
-        backgroundImage:
-          theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-            : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
-        backgroundSize: '100% 50%',
-        backgroundRepeat: 'no-repeat',
-        color: (theme) =>
-                    theme.palette.mode === 'light' ? 'primary.main' : 'primary.light'
-      })}
-      className="pt-16"
-    >
-      <Navbars page={ current_page }/>
-      <Container
-          sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          pt: { xs: 4, sm: 8 },
-          pb: { xs: 4, sm: 8 },
-          }}
-      >
-        <div>
-          <Typography
-            textAlign="center"
-            color="black"
-            sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
-          >
-            มีปัญหาปรึกษาพี่
-          </Typography>
-          <Typography
-            textAlign="center"
-            variant="h2"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignSelf: 'center',
-              fontSize: 'clamp(1.5rem, 5vw, 2rem)',
-              color: 'black'
-            }}
-          >
-            Contacts
-          </Typography>
-        </div>
-      </Container>
-      <Footer />
-    </Box>
-  );
-};
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
 
-export default Contacts2;
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Navbars page={ current_page }/>
+      <CssBaseline />
+      <Container sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        pt: { xs: 4, sm: 8 },
+        pb: { xs: 4, sm: 8 },
+        }}>
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Typography component="h1" variant="h5">
+            Contact us via email
+          </Typography>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="given-name"
+                  name="firstName"
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="First Name"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="lastName"
+                  label="Last Name"
+                  name="lastName"
+                  autoComplete="family-name"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="message"
+                  label="Message"
+                  type="message"
+                  id="message"
+                  multiline
+                  rows={4}
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
+  );
+}
