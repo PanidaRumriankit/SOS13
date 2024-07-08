@@ -5,12 +5,21 @@ import Typography from '@mui/material/Typography';
 import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { navLinks } from "../constants/index";
 
 
 function MenuCard(props) {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    for (let i = 0; i < 3; i++) {
+      if (props.link === navLinks[i].link) {
+        navLinks[i].current = true;
+      }
+      else {
+        navLinks[i].current = false;
+      }
+    }
     navigate(props.link);
   };
   
