@@ -95,7 +95,7 @@ export default function Mainpage() {
             alignItems: "center",
             gap: "1rem"}}>
             {navLinks.map((item) => (
-                <MenuCard icon={ item.icon } name={ item.name } description={ item.description } link={ item.link } />
+                <MenuCard name={ item.name } description={ item.description } link={ item.link } />
             ))}
           </Box>
         </Stack>

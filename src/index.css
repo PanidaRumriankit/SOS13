@@ -18,18 +18,64 @@ sup {
   vertical-align: super;
 }
 
-/* .rowcard {
-  display: flex;
-  height: 50vh;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 0px;
+.rainbow_text_animated:hover {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
-@media (max-width: 1064px) {
-  .rowcard {
-    flex-direction: column;
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
   }
-} */
+
+  50% {
+      background-position: 100% 0;
+  }
+}
+
+.box {
+  text-shadow: 0 1px 0 #000;
+  
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+    );
+  
+  border: solid 3px transparent;
+  border-radius: 2em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+  
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+  
+  background-position: center center;
+
+  animation: bg-spin 3s linear infinite;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}

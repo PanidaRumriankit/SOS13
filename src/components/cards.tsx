@@ -6,6 +6,7 @@ import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/materia
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { navLinks } from "../constants/index";
+import '../index.css';
 
 
 function MenuCard(props) {
@@ -24,14 +25,8 @@ function MenuCard(props) {
   };
   
   return (
-      <Card sx={{ width: 250 }}>
-        <CardActionArea onClick={handleClick}>
-        <CardMedia
-            component="img"
-            height="140"
-            image={ props.icon }
-            alt={ props.name }
-          />
+      <Card className="box" sx={{ width: 250, backgroundColor: 'transparent', color: 'white' }}>
+        <CardActionArea className="rainbow_text_animated" onClick={handleClick}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               { props.name }
@@ -64,8 +59,6 @@ function ProblemCard(props) {
     localStorage.setItem('status', JSON.stringify(status));
     checkHandler();
   };
-
-
 
     return (
         <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
