@@ -3,10 +3,10 @@ import './FAQ.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { alpha } from '@mui/material';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Navbars from './Navbars';
 import Footer from './Footer';
+import Box from '@mui/material/Box';
 
 interface FAQItem {
   section: string;

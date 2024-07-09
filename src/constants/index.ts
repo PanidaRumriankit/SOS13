@@ -1,7 +1,7 @@
 const navLinks = [
-  { name: "Problems", link: "/Problemspage", current: false,  description: "" },
-  { name: "FAQ", link: "/FAQ", current: false, description: "" },
-  { name: "Contacts", link: "/Contacts", current: false, description: "" },
+  { name: "Problems", link: "/Problemspage", current: false },
+  { name: "FAQ", link: "/FAQ", current: false },
+  { name: "Contacts", link: "/Contacts", current: false },
 ];
 
 const slides = [

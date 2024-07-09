@@ -1,6 +1,5 @@
 import React from 'react';
 import { ListItem, alpha } from '@mui/material';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -10,6 +9,7 @@ import { MenuCard } from "./cards";
 import { navLinks, slides } from "../constants/index";
 import CreateSlides from "./Slides";
 import starburst from '../assets/star_burst.mp4'
+import Box from '@mui/material/Box';
 
 export default function Mainpage() {
   return (
@@ -95,7 +95,7 @@ export default function Mainpage() {
             alignItems: "center",
             gap: "1rem"}}>
             {navLinks.map((item) => (
-                <MenuCard name={ item.name } description={ item.description } link={ item.link } />
+                <MenuCard name={ item.name } link={ item.link } />
             ))}
           </Box>
         </Stack>

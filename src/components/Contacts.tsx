@@ -1,17 +1,12 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbars from './Navbars';
 import Footer from './Footer';
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
+import Box from '@mui/material/Box';
 
 export default function SignUp() {
   const current_page = "/Contacts";
@@ -26,9 +21,8 @@ export default function SignUp() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <>
       <Navbars page={ current_page }/>
-      <CssBaseline />
       <Container sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -104,6 +98,6 @@ export default function SignUp() {
         </Box>
       </Container>
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }

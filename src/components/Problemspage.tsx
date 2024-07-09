@@ -1,12 +1,13 @@
 import React from 'react';
 import { ListItem, alpha } from '@mui/material';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Navbars from './Navbars';
 import NavProblem from './NavDay';
 import Footer from './Footer';
+import starburst from '../assets/star_burst.mp4';
+import Box from '@mui/material/Box';
 
 
 export default function Problempage() {
@@ -16,18 +17,29 @@ export default function Problempage() {
   <Box
     id="problem"
     sx={(theme) => ({
+      position: 'relative',
       width: '100%',
-      backgroundImage:
-        theme.palette.mode === 'light'
-          ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-          : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
-      backgroundSize: '100% 50%',
-      backgroundRepeat: 'no-repeat',
-      color: (theme) =>
-                  theme.palette.mode === 'light' ? 'primary.main' : 'primary.light'
+      minHeight: '100vh',
+      overflow: 'hidden'
     })}
     className="pt-16"
   >
+    <video
+        autoPlay
+        muted
+        loop
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1
+        }}
+      >
+        <source src={starburst} type="video/mp4" />
+      </video>
     <Navbars page={ current_page }/>
     <Container
         sx={{
