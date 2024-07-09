@@ -13,11 +13,25 @@ export default function NavProblem() {
   
     const filteredProblems = problems.filter(problem => problem.day === selectedDay);
 
-    const chooseCard = ({problem}) => { 
+    const chooseCard = (props) => { 
       return CheckCameraPermission() ? (
-         <ProblemCard problem={problem} />
+         <ProblemCardWebCam  
+            key={props.id}
+            title={props.title}
+            describe={props.describe}
+            img={props.img}
+            link={props.link}
+            id={props.id}
+         />
         ) : (
-         <ProblemCard problem={problem} />);
+         <ProblemCard  
+            key={props.id}
+            title={props.title}
+            describe={props.describe}
+            img={props.img}
+            link={props.link}
+            id={props.id}
+         />);
     };
 
   
@@ -60,9 +74,9 @@ export default function NavProblem() {
             justifyContent: 'flex-start'
           }}>
             {filteredProblems.map((problem) => (
-              <chooseCard
-                problem={problem}
-              />
+            <div>
+              {chooseCard(problem)}
+            </div>
             ))}
           </Box>
         </Container>
