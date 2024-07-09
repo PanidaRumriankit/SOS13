@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ProblemCard, ProblemCardWebCam } from './cards';
+import { CheckCameraPermission } from './cards';
 import { problems } from "../constants/index";
 import { AppBar, Toolbar, Button, Typography, Container, Box } from '@mui/material';
 
@@ -51,13 +51,9 @@ export default function NavProblem() {
             justifyContent: 'flex-start'
           }}>
             {filteredProblems.map((problem) => (
-              <ProblemCardWebCam
+              <CheckCameraPermission
                 key={problem.id}
-                title={problem.title}
-                describe={problem.describe}
-                img={problem.img}
-                link={problem.link}
-                id={problem.id}
+                problem={problem}
               />
             ))}
           </Box>

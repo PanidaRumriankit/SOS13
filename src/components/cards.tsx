@@ -88,7 +88,7 @@ function ProblemCard(props) {
 
 function ProblemCardWebCam(props) {
   return (
-  <Box sx={{ position: 'relative', width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', margin: 2, overflow: 'hidden' }}>
+  <Box sx={{ position: 'relative', width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
     <WebcamCapture />
       <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: 2, height: '100%'}}>
         <ProblemCard
@@ -104,4 +104,53 @@ function ProblemCardWebCam(props) {
   );
 };
 
-export {MenuCard, ProblemCard, ProblemCardWebCam};
+
+const CheckCameraPermission = ({ problem }) => {
+  const [hasPermission, setHasPermission] = useState(false);
+  const [permissionChecked, setPermissionChecked] = useState(false);
+
+  useEffect(() => {
+    const checkPermissions = async () => {
+      try {
+        await navigator.mediaDevices.getUserMedia({ video: true });
+        setHasPermission(true);
+      } catch (error) {
+        setHasPermission(false);
+      }
+      setPermissionChecked(true);
+    };
+
+    checkPermissions();
+  }, []);
+
+  if (!permissionChecked) {
+    return <Typography>Checking camera permissions...</Typography>;
+  }
+
+  if (!hasPermission) {
+    return (
+      <ProblemCard
+        key={problem.id}
+        title={problem.title}
+        describe={problem.describe}
+        img={problem.img}
+        link={problem.link}
+        id={problem.id}
+      />
+    );
+  }
+
+  return (
+    <ProblemCardWebCam
+      key={problem.id}
+      title={problem.title}
+      describe={problem.describe}
+      img={problem.img}
+      link={problem.link}
+      id={problem.id}
+    />
+  );
+};
+
+
+export {MenuCard, CheckCameraPermission};
