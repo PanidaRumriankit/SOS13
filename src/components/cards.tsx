@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { navLinks } from "../constants/index";
 import '../index.css';
-import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
+import { Box, Button, CardActionArea, CardActions, Checkbox, CircularProgress } from '@mui/material';
 import WebcamCapture from './webcam';
 
 
@@ -106,8 +106,7 @@ function ProblemCardWebCam(props) {
 
 
 const CheckCameraPermission = ({ problem }) => {
-  const [hasPermission, setHasPermission] = useState(false);
-  const [permissionChecked, setPermissionChecked] = useState(false);
+  const [hasPermission, setHasPermission] = useState(null); // null indicates permission check not started
 
   useEffect(() => {
     const checkPermissions = async () => {
@@ -117,14 +116,18 @@ const CheckCameraPermission = ({ problem }) => {
       } catch (error) {
         setHasPermission(false);
       }
-      setPermissionChecked(true);
     };
 
     checkPermissions();
   }, []);
 
-  if (!permissionChecked) {
-    return <Typography>Checking camera permissions...</Typography>;
+  if (hasPermission === null) {
+    return (
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+        <CircularProgress />
+        <Typography sx={{ ml: 2 }}>Checking camera permissions...</Typography>
+      </Box>
+    );
   }
 
   if (!hasPermission) {
