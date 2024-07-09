@@ -105,7 +105,7 @@ function ProblemCardWebCam(props) {
 };
 
 
-const CheckCameraPermission = ({ problem }) => {
+const CheckCameraPermission = () => {
   const [hasPermission, setHasPermission] = useState(null); // null indicates permission check not started
 
   useEffect(() => {
@@ -130,30 +130,9 @@ const CheckCameraPermission = ({ problem }) => {
     );
   }
 
-  if (!hasPermission) {
-    return (
-      <ProblemCard
-        key={problem.id}
-        title={problem.title}
-        describe={problem.describe}
-        img={problem.img}
-        link={problem.link}
-        id={problem.id}
-      />
-    );
-  }
+  return hasPermission;
 
-  return (
-    <ProblemCardWebCam
-      key={problem.id}
-      title={problem.title}
-      describe={problem.describe}
-      img={problem.img}
-      link={problem.link}
-      id={problem.id}
-    />
-  );
 };
 
 
-export {MenuCard, CheckCameraPermission};
+export {MenuCard, CheckCameraPermission, ProblemCard, ProblemCardWebCam};

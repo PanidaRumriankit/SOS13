@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { CheckCameraPermission } from './cards';
+import { CheckCameraPermission, ProblemCard, ProblemCardWebCam } from './cards';
 import { problems } from "../constants/index";
 import { AppBar, Toolbar, Button, Typography, Container, Box } from '@mui/material';
+import { Check } from '@mui/icons-material';
 
 export default function NavProblem() {
     const [selectedDay, setSelectedDay] = useState(1);
@@ -11,6 +12,14 @@ export default function NavProblem() {
     };
   
     const filteredProblems = problems.filter(problem => problem.day === selectedDay);
+
+    const chooseCard = ({problem}) => { 
+      return CheckCameraPermission() ? (
+         <ProblemCard problem={problem} />
+        ) : (
+         <ProblemCard problem={problem} />);
+    };
+
   
     return (
       <div>
@@ -51,8 +60,7 @@ export default function NavProblem() {
             justifyContent: 'flex-start'
           }}>
             {filteredProblems.map((problem) => (
-              <CheckCameraPermission
-                key={problem.id}
+              <chooseCard
                 problem={problem}
               />
             ))}
