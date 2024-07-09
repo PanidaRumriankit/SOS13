@@ -90,7 +90,7 @@ function ProblemCardWebCam(props) {
   return (
   <Box sx={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
     <WebcamCapture />
-      <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: 2 }}>
+      <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: 2, height: '100%'}}>
         <ProblemCard
           key={props.id}
           title={props.title}
