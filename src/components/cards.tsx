@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { navLinks } from "../constants/index";
 import '../index.css';
 import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
+import WebcamCapture from './webcam';
 
 
 function MenuCard(props) {
@@ -58,7 +59,7 @@ function ProblemCard(props) {
   };
 
     return (
-        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', margin: 2, backgroundColor: 'rgba(255, 255, 255, 0.8)'  }}>
             <CardMedia
               component="img"
               height="140"
@@ -85,4 +86,22 @@ function ProblemCard(props) {
       );
 }
 
-export {MenuCard, ProblemCard};
+function ProblemCardWebCam(props) {
+  return (
+  <Box sx={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+    <WebcamCapture />
+      <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: 2 }}>
+        <ProblemCard
+          key={props.id}
+          title={props.title}
+          describe={props.describe}
+          img={props.img}
+          link={props.link}
+          id={props.id}
+        />
+    </Box>
+  </Box>
+  );
+};
+
+export {MenuCard, ProblemCard, ProblemCardWebCam};

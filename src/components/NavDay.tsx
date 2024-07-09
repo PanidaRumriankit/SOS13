@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ProblemCard } from './cards';
+import { ProblemCard, ProblemCardWebCam } from './cards';
 import { problems } from "../constants/index";
 import { AppBar, Toolbar, Button, Typography, Container, Box } from '@mui/material';
 
@@ -51,7 +51,7 @@ export default function NavProblem() {
             justifyContent: 'flex-start'
           }}>
             {filteredProblems.map((problem) => (
-              <ProblemCard
+              <ProblemCardWebCam
                 key={problem.id}
                 title={problem.title}
                 describe={problem.describe}
