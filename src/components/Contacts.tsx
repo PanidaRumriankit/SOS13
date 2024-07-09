@@ -8,16 +8,15 @@ import Navbars from './Navbars';
 import Footer from './Footer';
 import starburst from '../assets/star_burst.mp4';
 import Box from '@mui/material/Box';
+import emailjs from '@emailjs/browser';
 
-export default function Contact() {
+export default function Contacts() {
   const current_page = "/Contacts";
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-    });
+    emailjs.sendForm('service_ht1s9aa', 'template_4ilzyfo', event.target, 'Qo-tHjDpMDpRS2wAk');
   };
 
   const WhiteTextField = styled((props: TextFieldProps) => (
