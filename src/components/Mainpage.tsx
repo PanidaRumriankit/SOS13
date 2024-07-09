@@ -65,8 +65,7 @@ export default function Mainpage() {
               variant="h1"
               sx={{
                 fontSize: 'clamp(3rem, 10vw, 4rem)',
-                color: (theme) =>
-                  theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                color: 'primary.main',
               }}
             >
               13<sup>th</sup>
