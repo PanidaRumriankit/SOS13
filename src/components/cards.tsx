@@ -59,7 +59,7 @@ function ProblemCard(props) {
   };
 
     return (
-        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', margin: 2, backgroundColor: 'rgba(255, 255, 255, 0.2)'  }}>
+        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'rgba(255, 255, 255, 0.2)'  }}>
             <CardMedia
               component="img"
               height="140"
