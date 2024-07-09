@@ -8,7 +8,7 @@ import { navLinks } from "../constants/index";
 import '../index.css';
 import { Box, Button, CardActionArea, CardActions, Checkbox, CircularProgress } from '@mui/material';
 import WebcamCapture from './webcam';
-import Banana from '../assets/banana.webp'
+import Banana from '../assets/banana.jpg'
 
 
 function MenuCard(props) {
