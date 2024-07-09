@@ -40,7 +40,7 @@ function MenuCard(props) {
 
 const status = localStorage.status ? JSON.parse(localStorage.status) : {};
 
-function ProblemCard(props) {
+function ProblemCard(props, alpha='1') {
 
   const [isChecked, setIsChecked] = useState(status[props.id] ? status[props.id] : false);
 
@@ -59,7 +59,7 @@ function ProblemCard(props) {
   };
 
     return (
-        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'rgba(255, 255, 255, 0.2)'  }}>
+        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: ('rgba(255, 255, 255, ' + alpha + ')')  }}>
             <CardMedia
               component="img"
               height="140"
@@ -98,6 +98,7 @@ function ProblemCardWebCam(props) {
           img={props.img}
           link={props.link}
           id={props.id}
+          alpha='0.2'
         />
     </Box>
   </Box>
