@@ -8,6 +8,7 @@ import { navLinks } from "../constants/index";
 import '../index.css';
 import { Box, Button, CardActionArea, CardActions, Checkbox, CircularProgress } from '@mui/material';
 import WebcamCapture from './webcam';
+import Banana from '../assets/banana.webp'
 
 
 function MenuCard(props) {
@@ -40,7 +41,7 @@ function MenuCard(props) {
 
 const status = localStorage.status ? JSON.parse(localStorage.status) : {};
 
-function ProblemCard(props, alpha='1') {
+function ProblemCard(props) {
 
   const [isChecked, setIsChecked] = useState(status[props.id] ? status[props.id] : false);
 
@@ -59,7 +60,7 @@ function ProblemCard(props, alpha='1') {
   };
 
     return (
-        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: ('rgba(255, 255, 255, ' + alpha + ')')  }}>
+        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
             <CardMedia
               component="img"
               height="140"
@@ -89,7 +90,18 @@ function ProblemCard(props, alpha='1') {
 function ProblemCardWebCam(props) {
   return (
   <Box sx={{ position: 'relative', width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
-    <WebcamCapture />
+    <img src={Banana} alt='banana pic eiei'
+    style={{
+      backgroundColor: 'white',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: -1, // Ensures the webcam is behind other content
+      objectFit: 'cover'
+    }}/>
+    <WebcamCapture/>
       <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', height: '100%'}}>
         <ProblemCard
           key={props.id}
@@ -98,7 +110,6 @@ function ProblemCardWebCam(props) {
           img={props.img}
           link={props.link}
           id={props.id}
-          alpha='0.2'
         />
     </Box>
   </Box>
@@ -106,34 +117,6 @@ function ProblemCardWebCam(props) {
 };
 
 
-const CheckCameraPermission = () => {
-  const [hasPermission, setHasPermission] = useState(null); // null indicates permission check not started
-
-  useEffect(() => {
-    const checkPermissions = async () => {
-      try {
-        await navigator.mediaDevices.getUserMedia({ video: true });
-        setHasPermission(true);
-      } catch (error) {
-        setHasPermission(false);
-      }
-    };
-
-    checkPermissions();
-  }, []);
-
-  if (hasPermission === null) {
-    return (
-      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        <CircularProgress />
-        <Typography sx={{ ml: 2 }}>Checking camera permissions...</Typography>
-      </Box>
-    );
-  }
-
-  return hasPermission;
-
-};
 
 
-export {MenuCard, CheckCameraPermission, ProblemCard, ProblemCardWebCam};
+export {MenuCard, ProblemCard, ProblemCardWebCam};
