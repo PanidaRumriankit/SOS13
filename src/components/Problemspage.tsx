@@ -8,10 +8,13 @@ import NavProblem from './NavDay';
 import Footer from './Footer';
 import starburst from '../assets/star_burst.mp4';
 import Box from '@mui/material/Box';
+import Webcam from "react-webcam";
 
 
 export default function Problempage() {
   const current_page = "/Problemspage";
+
+  const WebcamComponent = () => <Webcam />;
 
   return (
   <Box
@@ -50,6 +53,7 @@ export default function Problempage() {
         }}
     >
       <NavProblem />
+      <WebcamComponent />
     </Container>
     <Footer />
   </Box>
