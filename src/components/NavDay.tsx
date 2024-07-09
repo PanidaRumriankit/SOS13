@@ -4,6 +4,27 @@ import { problems } from "../constants/index";
 import { AppBar, Toolbar, Button, Typography, Container, Box } from '@mui/material';
 import { Check } from '@mui/icons-material';
 
+const chooseCard = (props) => { 
+  return CheckCameraPermission() ? (
+     <ProblemCardWebCam  
+        key={props.id}
+        title={props.title}
+        describe={props.describe}
+        img={props.img}
+        link={props.link}
+        id={props.id}
+     />
+    ) : (
+     <ProblemCard  
+        key={props.id}
+        title={props.title}
+        describe={props.describe}
+        img={props.img}
+        link={props.link}
+        id={props.id}
+     />);
+};
+
 export default function NavProblem() {
     const [selectedDay, setSelectedDay] = useState(1);
   
@@ -12,28 +33,6 @@ export default function NavProblem() {
     };
   
     const filteredProblems = problems.filter(problem => problem.day === selectedDay);
-
-    const chooseCard = (props) => { 
-      return CheckCameraPermission() ? (
-         <ProblemCardWebCam  
-            key={props.id}
-            title={props.title}
-            describe={props.describe}
-            img={props.img}
-            link={props.link}
-            id={props.id}
-         />
-        ) : (
-         <ProblemCard  
-            key={props.id}
-            title={props.title}
-            describe={props.describe}
-            img={props.img}
-            link={props.link}
-            id={props.id}
-         />);
-    };
-
   
     return (
       <div>
