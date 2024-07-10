@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './FAQ.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { alpha } from '@mui/material';
 import Container from '@mui/material/Container';
 import Navbars from './Navbars';
 import Footer from './Footer';
 import Box from '@mui/material/Box';
+import starburst from '../assets/star_burst.mp4';
 
 interface FAQItem {
   section: string;
@@ -78,12 +78,10 @@ const faqItems: FAQItem[] = [
 ];
 
 const FAQ: React.FC = () => {
-  // Use an object to store active indices for each section
   const [activeIndices, setActiveIndices] = useState<Record<string, number | null>>({});
 
   const current_page = "/FAQ";
 
-  // Function to toggle accordion for a specific section and index
   const toggleAccordion = (section: string, index: number) => {
     setActiveIndices(prevState => ({
       ...prevState,
@@ -91,36 +89,26 @@ const FAQ: React.FC = () => {
     }));
   };
 
-  // Group FAQs by section
   const groupedFAQs = faqItems.reduce((groups: Record<string, FAQItem[]>, item) => {
     (groups[item.section] = groups[item.section] || []).push(item);
     return groups;
   }, {});
 
   return (
-    <Box
-      id="FAQ"
-      sx={(theme) => ({
-        width: '100%',
-        backgroundImage:
-          theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-            : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
-        backgroundSize: '100% 50%',
-        backgroundRepeat: 'no-repeat',
-        color: (theme) =>
-                    theme.palette.mode === 'light' ? 'primary.main' : 'primary.light'
-      })}
-      className="pt-16"
-    >
-      <Navbars page={ current_page }/>
+    <Box id="FAQ" className="pt-16">
+      <video autoPlay loop muted className="background-video">
+        <source src={starburst} type="video/mp4" />
+      </video>
+      <Navbars page={current_page} />
       <Container
-          sx={{
+        sx={{
           display: 'flex',
           flexDirection: 'column',
           pt: { xs: 4, sm: 8 },
           pb: { xs: 4, sm: 8 },
-          }}
+          position: 'relative',
+          zIndex: 1,
+        }}
       >
         <div className="wrapper">
           <h1>Frequently Asked Questions</h1>
@@ -150,9 +138,6 @@ const FAQ: React.FC = () => {
       </Container>
       <Footer />
     </Box>
-
-
-    
   );
 };
 
