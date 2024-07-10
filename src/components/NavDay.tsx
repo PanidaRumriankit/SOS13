@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ProblemCard, ProblemCardWebCam } from './cards';
 import { problems } from "../constants/index";
-import { AppBar, Toolbar, Button, Typography, Container, Box } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, Container, Box, Switch } from '@mui/material';
 import { Check } from '@mui/icons-material';
 
 
 export default function NavProblem() {
     const [selectedDay, setSelectedDay] = useState(1);
+
+    const [useCamera, setUseCamera] = useState(true);
   
     const handleDayChange = (day) => {
       setSelectedDay(day);
+    };
+
+    const handleCameraChange = () => {
+      setUseCamera(!useCamera);
     };
   
     const filteredProblems = problems.filter(problem => problem.day === selectedDay);
@@ -42,6 +48,11 @@ export default function NavProblem() {
                 >
                     Day 3
             </Button>
+            <Switch 
+              checked={useCamera}
+              onChange={() => handleCameraChange()}
+              color = 'default'
+              />
           </Toolbar>
         </AppBar>
         <Container>
@@ -53,13 +64,14 @@ export default function NavProblem() {
             justifyContent: 'flex-start'
           }}>
             {filteredProblems.map((problem) => (
-              <ProblemCardWebCam  
+              <ProblemCardWebCam
                 key={problem.id}
                 title={problem.title}
                 describe={problem.describe}
                 img={problem.img}
                 link={problem.link}
                 id={problem.id}
+                camera={useCamera}
               />
             ))}
           </Box>

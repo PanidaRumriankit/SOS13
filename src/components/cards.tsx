@@ -101,7 +101,7 @@ function ProblemCardWebCam(props) {
       zIndex: -1, // Ensures the webcam is behind other content
       objectFit: 'cover'
     }}/>
-    <WebcamCapture/>
+    {props.camera ? <div/> : <WebcamCapture/>}
       <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', height: '100%'}}>
         <ProblemCard
           key={props.id}
