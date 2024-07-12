@@ -297,11 +297,11 @@ const problems = [
     id: 35
   },
 
-  { title: "Impossible Challenge",
+  { title: "Impossibly impossible Challenge",
     describe: "Hardest project.",
     day: 3,
     link: "http://bitly.com/98K8eH ",
-    img: "",
+    img: "workout.png",
     id: 36
   },
 
