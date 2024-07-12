@@ -8,9 +8,6 @@ import { navLinks } from "../constants/index";
 import '../index.css';
 import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
 import WebcamCapture from './webcam';
-import Banana from '../assets/banana.jpg';
-import BgStar from '../assets/bg_star';
-import SwordIMG from '../assets/cardIMG/sword.png';
 import getIMG from '../utils/getIMG';
 
 
@@ -70,7 +67,7 @@ function ProblemCard(props) {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      backgroundColor: 'rgba(1, 23, 51, 0.9)',
+      backgroundColor: 'rgba(1, 23, 51, 0.6)',
       color: 'white',
       textAlign: 'center',
       borderRadius: 2,
@@ -131,17 +128,6 @@ function ProblemCard(props) {
 function ProblemCardWebCam(props) {
   return (
   <Box sx={{ position: 'relative', width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
-    {/* <img src={Banana} alt='banana pic eiei'
-    style={{
-      backgroundColor: 'white',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      zIndex: -1, // Ensures the webcam is behind other content
-      objectFit: 'cover'
-    }}/> */}
     <WebcamCapture/>
       <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', height: '100%'}}>
         <ProblemCard
