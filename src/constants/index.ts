@@ -308,6 +308,7 @@ const problems = [
 ];
 
 const elab_exercise_source_code = [
+
   /*Dear my junior.
   Do not modifly these code if you modifly it. It will affects SOS13 problems.
   Scroll down to see for_sos14 const you can use the link at the for_sos14 const to clone my exercise.
@@ -565,7 +566,7 @@ const elab_exercise_source_code = [
   
 ]
 
-const for_sos14 = [
+const for_sos14: never[] = [
 /*Hi, My junior for_sos14 const is used for store cloneable Elab code. 
 If SOS14 is coming and you have no idea how to write Elab problems. You can use these Elab links to see my Elab codes by cloning it.
 However, don't modifly my code at elab_exercise_source_code only modifly your copy code.*/
@@ -575,5 +576,8 @@ However, don't modifly my code at elab_exercise_source_code only modifly your co
 
 
 ];
+
+elab_exercise_source_code;
+for_sos14;
 
 export { navLinks, slides, problems };
