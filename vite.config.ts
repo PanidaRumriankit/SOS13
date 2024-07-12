@@ -22,7 +22,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/', // Ensure this is set correctly for your deployment
+  base: '/SOS13/', // Ensure this is set correctly for your deployment
   build: {
     outDir: 'dist', // Output directory for the build files
   }
