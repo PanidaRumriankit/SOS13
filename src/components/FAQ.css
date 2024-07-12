@@ -11,17 +11,21 @@
 
 #FAQ {
   position: relative;
-  color: #1976d2; 
+  color: #1976d2;
 }
 
 .wrapper {
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   font-size: 20px;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  margin-left: 20px;
 }
 
 .wrapper p {
@@ -35,6 +39,13 @@
   margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
+  grid-column: span 4;
+}
+
+.wrapper h2 {
+  font-size: 24px;
+  color: #1976d2;
+  margin: 10px 0;
 }
 
 .faq {
@@ -47,7 +58,7 @@
   background-color: #e6f0ff;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 100%; 
   text-align: left;
   border: none;
   outline: none;
@@ -56,6 +67,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #1976d2;
 }
 
 .accordion.active,
@@ -63,18 +75,18 @@
   background-color: #b3d9ff;
 }
 
-.accordion i {
-  margin-left: auto;
-}
-
 .panel {
   padding: 0 18px;
   background-color: white;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
   font-size: 16px;
+  display: none;
 }
 
 .panel p {
   margin: 18px 0;
+}
+
+.panel.active {
+  display: block;
 }
