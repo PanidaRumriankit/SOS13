@@ -3,12 +3,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { navLinks } from "../constants/index";
 import '../index.css';
-import { Box, Button, CardActionArea, CardActions, Checkbox, CircularProgress } from '@mui/material';
+import { Box, Button, CardActionArea, CardActions, Checkbox } from '@mui/material';
 import WebcamCapture from './webcam';
-import Banana from '../assets/banana.jpg'
+import Banana from '../assets/banana.jpg';
+import BgStar from '../assets/bg_star';
+import SwordIMG from '../assets/cardIMG/sword.png';
+import getIMG from '../utils/getIMG';
 
 
 function MenuCard(props) {
@@ -44,6 +47,7 @@ const status = localStorage.status ? JSON.parse(localStorage.status) : {};
 function ProblemCard(props) {
 
   const [isChecked, setIsChecked] = useState(status[props.id] ? status[props.id] : false);
+  const image = getIMG(props.img);
 
   const checkHandler = () => {
     setIsChecked(!isChecked);
@@ -59,38 +63,75 @@ function ProblemCard(props) {
     checkHandler();
   };
 
-    return (
-        <Card sx={{ width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-            <CardMedia
-              component="img"
-              height="140"
-              image={ props.img }
-              alt={ props.title }
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                { props.id + " " + props.title }
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                { props.describe }
-              </Typography>
-            </CardContent>
-          <CardActions>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <Button size="small" color="primary" onClick={handleClick}>
-              View
-            </Button>
-            <Checkbox onChange={handleCheckbox} checked={isChecked}/>
-          </Box>
-          </CardActions>
-        </Card>
-      );
+  return (
+    <Card sx={{
+      width: 250,
+      height: 400,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      backgroundColor: 'rgba(1, 23, 51, 0.9)',
+      color: 'white',
+      textAlign: 'center',
+      borderRadius: 2,
+      boxShadow: 3,
+      padding: 2,
+      paddingBottom: 0,
+      overflow: 'visible'
+    }}>
+      <Box sx={{ 
+        width: 40, 
+        height: 40, 
+        borderRadius: '50%', 
+        backgroundColor: '#f272c8', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        alignSelf: 'center', 
+        marginBottom: -2,
+        zIndex: 1
+      }}>
+        <Typography variant="h6" component="div" sx={{ color: 'white' }}>
+          {props.id}
+        </Typography>
+      </Box>
+      <CardContent sx={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        flexGrow: 1,
+        paddingTop: 0,
+      }}>
+        <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', paddingBottom: 2 }}>
+          {props.title}
+        </Typography>
+        {image && (
+          <CardMedia
+            component="img"
+            sx={{ width: '80px', height: '80px', marginY: 2 }}
+            image={image}
+            alt={props.title}
+          />
+        )}
+        <Typography variant="body2" sx={{ color: '#bdbdbd', paddingX: 1, paddingTop: 2 }}>
+          {props.describe}
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Button size="small" color="primary" onClick={handleClick}>
+          View
+        </Button>
+        <Checkbox onChange={handleCheckbox} checked={isChecked} sx={{ color: 'white' }} />
+      </CardActions>
+    </Card>
+  );
 }
 
 function ProblemCardWebCam(props) {
   return (
   <Box sx={{ position: 'relative', width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
-    <img src={Banana} alt='banana pic eiei'
+    {/* <img src={Banana} alt='banana pic eiei'
     style={{
       backgroundColor: 'white',
       position: 'absolute',
@@ -100,7 +141,7 @@ function ProblemCardWebCam(props) {
       height: '100%',
       zIndex: -1, // Ensures the webcam is behind other content
       objectFit: 'cover'
-    }}/>
+    }}/> */}
     <WebcamCapture/>
       <Box sx={{ position: 'relative', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', height: '100%'}}>
         <ProblemCard
