@@ -38,7 +38,7 @@ const faqItems: FAQItem[] = [
   {
     section: 'About SKE',
     question: 'When does the course start and what to prepare?',
-    answer: 'The first semester\'s start date is 7th August. Though there will be events before that day like SKE tutorial camp'
+    answer: 'The first semester\'s start date is 5th August. Though there will be events before that day like SKE tutorial camp'
   },
   {
     section: 'About SOS Camp',
@@ -98,6 +98,7 @@ const FAQ: React.FC = () => {
     <Box id="FAQ" className="pt-16">
       <video autoPlay loop muted className="background-video">
         <source src={starburst} type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <Navbars page={current_page} />
       <Container
