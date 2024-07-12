@@ -10,6 +10,7 @@ class WebcamCapture extends React.Component {
       return (
         <Webcam
           videoConstraints={videoConstraints}
+          mirrored={true}
           style={{
             position: 'absolute',
             top: 0,
