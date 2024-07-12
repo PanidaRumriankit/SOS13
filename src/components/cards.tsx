@@ -11,7 +11,7 @@ import WebcamCapture from './webcam';
 import getIMG from '../utils/getIMG';
 
 
-function MenuCard(props) {
+function MenuCard(props: any) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -41,7 +41,7 @@ function MenuCard(props) {
 
 const status = localStorage.status ? JSON.parse(localStorage.status) : {};
 
-function ProblemCard(props) {
+function ProblemCard(props: any) {
 
   const [isChecked, setIsChecked] = useState(status[props.id] ? status[props.id] : false);
   const image = getIMG(props.img);
@@ -125,7 +125,7 @@ function ProblemCard(props) {
   );
 }
 
-function ProblemCardWebCam(props) {
+function ProblemCardWebCam(props: any) {
   return (
   <Box sx={{ position: 'relative', width: 250 , height: 400, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
     <WebcamCapture/>

@@ -1,24 +1,18 @@
-import { Fragment } from "react";
 import { navLinks } from "../constants/index";
 import logo from "../assets/logo.png";
 import {
   Disclosure,
   DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  Transition,
+  DisclosurePanel
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
-function classNames(...classes) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbars(page) {
+export default function Navbars(page: any) {
   for (let i = 0; i < 3; i++) {
     if (page.page === navLinks[i].link) {
       navLinks[i].current = true;

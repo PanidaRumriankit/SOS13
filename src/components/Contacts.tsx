@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Button from '@mui/material/Button';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
@@ -13,9 +12,8 @@ import emailjs from '@emailjs/browser';
 export default function Contacts() {
   const current_page = "/Contacts";
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
     emailjs.sendForm('service_ht1s9aa', 'template_4ilzyfo', event.target, 'Qo-tHjDpMDpRS2wAk');
   };
 
@@ -75,7 +73,7 @@ export default function Contacts() {
   return (
     <Box
       id="problem"
-      sx={(theme) => ({
+      sx={() => ({
         position: 'relative',
         width: '100%',
         minHeight: '100vh',

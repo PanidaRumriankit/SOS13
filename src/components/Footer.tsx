@@ -17,7 +17,7 @@ export default function Footer() {
         setValue('');
     };
 
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    const handleChange = (newValue: string) => {
         setValue(newValue);
 
         switch (newValue) {

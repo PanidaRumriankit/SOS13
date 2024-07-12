@@ -1,8 +1,4 @@
-import React from 'react';
-import { ListItem, alpha } from '@mui/material';
 import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import Navbars from './Navbars';
 import NavProblem from './NavDay';
 import Footer from './Footer';
@@ -16,7 +12,7 @@ export default function Problempage() {
   return (
   <Box
     id="problem"
-    sx={(theme) => ({
+    sx={() => ({
       position: 'relative',
       width: '100%',
       minHeight: '100vh',

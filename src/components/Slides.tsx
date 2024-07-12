@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
 
-function CreateSlides( props ) {
+function CreateSlides(props: any) {
     return (
         <Button sx={{
             '&.MuiButton-outlined': {
