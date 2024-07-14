@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './FAQ.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Container from '@mui/material/Container';
 import Navbars from './Navbars';
 import Footer from './Footer';
 import Box from '@mui/material/Box';
 import starburst from '../assets/star_burst.mp4';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
 
 interface FAQItem {
   section: string;
@@ -78,16 +81,13 @@ const faqItems: FAQItem[] = [
 ];
 
 const FAQ: React.FC = () => {
-  const [activeIndices, setActiveIndices] = useState<Record<string, number | null>>({});
+  const [expanded, setExpanded] = useState<string | false>(false);
+
+  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   const current_page = "/FAQ";
-
-  const toggleAccordion = (section: string, index: number) => {
-    setActiveIndices(prevState => ({
-      ...prevState,
-      [section]: prevState[section] === index ? null : index,
-    }));
-  };
 
   const groupedFAQs = faqItems.reduce((groups: Record<string, FAQItem[]>, item) => {
     (groups[item.section] = groups[item.section] || []).push(item);
@@ -117,21 +117,22 @@ const FAQ: React.FC = () => {
             <div key={sectionIndex}>
               <h2>{section}</h2>
               {groupedFAQs[section].map((item, index) => (
-                <div className="faq" key={index}>
-                  <button
-                    className={`accordion ${activeIndices[section] === index ? 'active' : ''}`}
-                    onClick={() => toggleAccordion(section, index)}
+                <Accordion
+                  key={index}
+                  expanded={expanded === `${section}-${index}`}
+                  onChange={handleChange(`${section}-${index}`)}
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls={`${section}-${index}-content`}
+                    id={`${section}-${index}-header`}
                   >
-                    {item.question}
-                    <FontAwesomeIcon icon={faChevronDown} />
-                  </button>
-                  <div
-                    className="panel"
-                    style={{ display: activeIndices[section] === index ? 'block' : 'none' }}
-                  >
-                    <p>{item.answer}</p>
-                  </div>
-                </div>
+                    <Typography>{item.question}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>{item.answer}</Typography>
+                  </AccordionDetails>
+                </Accordion>
               ))}
             </div>
           ))}
