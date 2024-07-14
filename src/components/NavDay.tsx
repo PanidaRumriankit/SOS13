@@ -1,8 +1,7 @@
-import { useCallback, useState } from 'react';
-import { ProblemCard, ProblemCardWebCam } from './cards';
+import { useState } from 'react';
+import { ProblemCardWebCam } from './cards';
 import { problems } from "../constants/index";
 import { AppBar, Toolbar, Button, Typography, Container, Box, Switch } from '@mui/material';
-import { Check } from '@mui/icons-material';
 
 
 export default function NavProblem() {
@@ -10,7 +9,7 @@ export default function NavProblem() {
 
     const [useCamera, setUseCamera] = useState(true);
   
-    const handleDayChange = (day) => {
+    const handleDayChange = (day: number) => {
       setSelectedDay(day);
     };
 

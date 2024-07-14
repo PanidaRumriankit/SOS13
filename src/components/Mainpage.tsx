@@ -1,10 +1,7 @@
-import React from 'react';
-import { ListItem, alpha } from '@mui/material';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import Button from '@mui/material/Button';
 import { MenuCard } from "./cards";
 import { navLinks, slides } from "../constants/index";
 import CreateSlides from "./Slides";
@@ -15,7 +12,7 @@ export default function Mainpage() {
   return (
     <Box
       id="main"
-      sx={(theme) => ({
+      sx={() => ({
         position: 'relative',
         width: '100%',
         height: '100vh',
